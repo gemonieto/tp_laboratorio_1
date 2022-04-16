@@ -1,0 +1,35 @@
+/*
+ * Operaciones.c
+ *
+ *  Created on: 14 abr. 2022
+ *      Author: Mautalen
+ */
+
+#include "Operaciones.h"
+
+
+int retorno = -1;
+int auxiliarInt;
+int retornoScanf;
+
+if(mensaje != NULL && minimo < maximo && mensaje error != NULL && pNumeroIngresado != NULL && reintentos > 0)
+{
+	printf("%s", mensaje);
+	retornoScanf = scanf("%d" &auxiliarInt);
+	do
+	{
+		printf("\t Reintento N° %d", reintentos);
+		if retornoScanf != 1 || auxiliarInt > maximo || auxiliarInt < minimo)
+		{
+			printf("%s", mensajeError);
+			retornoScanf = scanf("%d", &auxiliarInt);
+			reintentos--;
+		}
+		else
+		{
+			reintentos = 0;
+			*pNumeroIngresado = auxiliarInt;
+			retorno = 0;
+		}
+	}
+}
